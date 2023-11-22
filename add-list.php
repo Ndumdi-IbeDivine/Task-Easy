@@ -6,51 +6,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Easy Task-manager</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <button><a href="<?php echo SITEURL; ?>">Home</a></button>
 
-    <h3>ADD LISTS PAGE</h3>
+    <div class="wrapper">
 
-    <p>
-        
-        <?php 
-        
-            //Session failed message
-            if(isset($_SESSION["add_fail"]))
-            {
-                //display session message
-                echo $_SESSION["add_fail"];
-                //Remove the message after displaying once
-                unset($_SESSION["add_fail"]);
-            }
-        
-        ?>
-        
-    </p>
+        <a class="btn-secondary" href="<?php echo SITEURL; ?>">Home</a>
 
-    <form method="POST" action="">
+        <h3>ADD LISTS PAGE</h3>
 
-        <table>
-            <tr>
-                <td>List Name</td>
-                <td><input type="text" name="list_name" placeholder="Type list name here" required="required"></td>
-            </tr>
-            <tr>
-                <td>List Description</td>
-                <td><textarea name="list_description" placeholder="Type list description here"></textarea></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="submit" value="SAVE"></td>
-            </tr>
-        </table>
+        <p>
+            
+            <?php 
+            
+                //Session failed message
+                if(isset($_SESSION["add_fail"]))
+                {
+                    //display session message
+                    echo $_SESSION["add_fail"];
+                    //Remove the message after displaying once
+                    unset($_SESSION["add_fail"]);
+                }
+            
+            ?>
+            
+        </p>
 
-    </form>
+        <form method="POST" action="">
 
-    <div>
-        <button><a href="<?php echo SITEURL; ?>manage-lists.php">Manage Lists</a></button>
+            <table>
+                <tr>
+                    <td>List Name</td>
+                    <td><input class="btn-primary" type="text" name="list_name" placeholder="Type list name here" required="required"></td>
+                </tr>
+                <tr>
+                    <td>List Description</td>
+                    <td><textarea name="list_description" placeholder="Type list description here"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="SAVE"></td>
+                </tr>
+            </table>
+
+        </form>
+
+        <div>
+            <a class="btn-secondary" href="<?php echo SITEURL; ?>manage-lists.php">Manage Lists</a>
+        </div>
+
     </div>
+    
 </body>
 </html>
 

@@ -33,54 +33,80 @@
 }
 
 /* styles for the dashboard */
-.sidebar {
-    margin: 15px;
-    padding: 10px;
-    width: 150px;
-    background-color: #b6aae8;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
+    padding: 2%;
 }
 
-/* sidebar links */
-.sidebar a {
-    display: block;
+h1{
+    color: #3867d6;
+    margin-bottom: 2%;
+}
+h3{
+    margin: 2% 0;
+}
+
+.menu{
+    margin-bottom: 2%;
+}
+
+.menu a{
+    font-weight: bold;
+    margin-right: 1%;
     color: black;
-    padding: 16px;
     text-decoration: none;
 }
 
-/* Active/current link */
-.sidebar a.active {
-    background-color: #04AA6D;
+.menu a:hover{
+    text-decoration: underline;
+}
+
+.btn-primary{
+    background-color: #26de81;
+    padding: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.btn-primary:hover{
+    background-color: #20bf6b;
+}
+
+.btn-secondary{
+    background-color: #778ca3;
+    padding: 5px;
+    font-weight: bold;
+    text-decoration: none;
     color: white;
 }
+.btn-secondary:hover{
+    background-color: #4b6584;
+}
 
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+.btn-lg{
+    width: 50%;
 }
 
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
+.tbl-full{
+    width: 100%;
 }
-  
-  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
+
+table tr th{
+    text-align: left;
+    border-bottom: 1px solid black;
+    padding: 1%;
+    padding-top: 3%;
+}
+
+table tr td{
+    padding: 1%;
+}
+
+.tbl-half{
+    width: 40%;
 }
 
 .all-tasks {
